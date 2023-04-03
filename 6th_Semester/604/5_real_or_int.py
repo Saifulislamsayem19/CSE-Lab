@@ -1,4 +1,6 @@
 import re
+import nltk
+
 
 def is_real(n):
     exp = re.compile(r"[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)")
@@ -18,10 +20,15 @@ def is_real(n):
 RE_Operators = re.compile("(\++)|(-)|(=)|(\*)|(/)|(%)|(--)|(<=)|(>=)|(\&)")
 
 i = input("Enter a number: ")
-# num = i.split()
-# for x in num:
-is_real(i)
+
+# tokens = nltk.wordpunct_tokenize(i)
+# print(tokens)
+num = i.split()
+for x in num:
+    is_real(x)
+
 
 # 4.5e-2 +4.5 -2 -2.7 100
 # 4.5+6=10.5
 # 9+4.285+67.453E-564
+
