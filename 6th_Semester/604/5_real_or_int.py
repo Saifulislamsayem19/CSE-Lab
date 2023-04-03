@@ -1,5 +1,4 @@
 import re
-import nltk
 
 
 def is_real(n):
@@ -21,8 +20,6 @@ RE_Operators = re.compile("(\++)|(-)|(=)|(\*)|(/)|(%)|(--)|(<=)|(>=)|(\&)")
 
 i = input("Enter a number: ")
 
-# tokens = nltk.wordpunct_tokenize(i)
-# print(tokens)
 num = i.split()
 for x in num:
     is_real(x)
